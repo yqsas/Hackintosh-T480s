@@ -1,10 +1,10 @@
 # 简介
 - Lenovo ThinkPad T480s Hackintosh EFI ，包含基础驱动，修改三码后开箱即用。
-- 适用版本：MacOS Mojava 10.14.0 ~ 10.14.2。
+- 适用版本：MacOS Mojave 10.14.0 ~ 10.14.2。
     > 如需 MacOS High Sierra 10.13.6版本，请issue
 
 # 前提
-1. 更换自带pm981的硬盘，截止10.13.6版本无解，Mojava未测试
+1. 更换自带pm981的硬盘，截止10.13.6版本无解，Mojave未测试
 2. 更换自带intel无线网卡，本人使用 BCM94352Z Dell DW1560
 3. efi里使用的键盘触控板驱动可支持多指手势，但是使用之前必须在bios里面禁用小红点功能
     > 小红点与触控板无法并存，重启后可在设置里勾选再取消勾选『轻点来点按』，解决误触问题
@@ -17,8 +17,8 @@
 Lenovo ThinkPad T480s
 - Intel i7-8550U
 - 16GB RAM
-- Samsung SM961 NVMe SSD (内置 PM981 不可用，已更换）
-- Dell DW1560 Wireless (内置 Intel AC8265 不可用)
+- Samsung SM961 NVMe SSD
+- Dell DW1560 Wireless (Intel AC8265 不可用)
 - 1440p 分辨率
 
 ## 硬件使用状态
