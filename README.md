@@ -52,7 +52,7 @@ Lenovo ThinkPad T480s
 # 推荐工具
 - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md) : 一键开启 macOS HiDPI
 
-# 感谢
+# 致谢
 - [linusyang92/macOS-ThinkPad-T480s](https://github.com/linusyang92/macOS-ThinkPad-T480s)
 - [kk1987/T480s-hackintosh](https://github.com/kk1987/T480s-hackintosh)
 - ThinkPad X1 Carbon黑果群(QQ群 Njc4Mzc3NzQ3)
