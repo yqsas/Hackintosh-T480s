@@ -1,6 +1,6 @@
 # 简介
 - Lenovo ThinkPad T480s Hackintosh EFI ，包含基础驱动，修改三码后开箱即用。
-- 适用版本：macOS Mojave 10.14.0 ~ 10.14.2。
+- 适用版本：macOS Mojave 10.14.0 ~ 10.14.3。
     > 如需 macOS High Sierra 10.13.6版本，请issue
 
 # 前提
