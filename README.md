@@ -1,7 +1,6 @@
 # 简介
 - Lenovo ThinkPad T480s Hackintosh EFI ，包含基础驱动，修改三码后开箱即用。
-- 适用版本：macOS Mojave 10.14.0 ~ 10.14.3。
-    > 如需 macOS High Sierra 10.13.6版本，请issue
+- 适用版本：macOS Mojave 10.14.0 ~ 10.14.4。
 
 # 前提
 1. 更换自带pm981的硬盘，截止10.13.6版本无解，Mojave未测试
@@ -49,8 +48,12 @@ Lenovo ThinkPad T480s
 
 3. 编辑 `config.plist` 中的SystemParameters内容:
     - CustomUUID：使用第一步中生成的UUID
+
 # 推荐工具
 - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md) : 一键开启 macOS HiDPI
+
+# 遗留问题
+1. Hidpi只能使用1440*810，超过此分辨率的情况下休眠后唤醒会花屏（雪花点）
 
 # 致谢
 - [linusyang92/macOS-ThinkPad-T480s](https://github.com/linusyang92/macOS-ThinkPad-T480s)

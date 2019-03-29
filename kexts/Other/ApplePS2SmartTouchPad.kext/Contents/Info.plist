@@ -870,7 +870,7 @@
 					<key>ClickpadVirtualButtons</key>
 					<false/>
 					<key>ClickpadVirtualButtonsArea</key>
-					<integer>20</integer>
+					<integer>0</integer>
 					<key>DisablePhysicalClicks</key>
 					<false/>
 					<key>EnablePointingOnVirtualButtonArea</key>
@@ -1038,11 +1038,11 @@
 					<key>PinchRotateMinSamples</key>
 					<integer>3</integer>
 					<key>PinchZoom</key>
-					<true/>
+					<false/>
 					<key>PinchZoomDelta</key>
 					<integer>300</integer>
 					<key>Rotation</key>
-					<true/>
+					<false/>
 					<key>RotationDelta</key>
 					<integer>350</integer>
 					<key>RotationMaxCFingDelta</key>
@@ -1296,13 +1296,13 @@
 				<key>Swiping</key>
 				<dict>
 					<key>3FingerSwipeDownAction</key>
-					<integer>4</integer>
+					<integer>0</integer>
 					<key>3FingerSwipeLeftAction</key>
-					<integer>17</integer>
+					<integer>11</integer>
 					<key>3FingerSwipeRightAction</key>
-					<integer>14</integer>
+					<integer>12</integer>
 					<key>3FingerSwipeUpAction</key>
-					<integer>4</integer>
+					<integer>0</integer>
 					<key>3FingerSwipes</key>
 					<true/>
 					<key>4FingerSwipeDownAction</key>
@@ -1372,7 +1372,7 @@
 					<key>2FingersTapAction</key>
 					<integer>33</integer>
 					<key>3FingersTapAction</key>
-					<integer>34</integer>
+        			<integer>34</integer>
 					<key>4FingersTapAction</key>
 					<integer>0</integer>
 					<key>5FingersTapAction</key>
@@ -1394,7 +1394,7 @@
 					<key>MulFingTapTimeOut</key>
 					<integer>200</integer>
 					<key>TapMaxDelta</key>
-					<integer>100</integer>
+					<integer>200</integer>
 					<key>TrackpadTappingCorners</key>
 					<false/>
 				</dict>
