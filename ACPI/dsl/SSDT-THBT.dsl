@@ -20,20 +20,24 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
             {
                 If (LNot (Arg2))
                 {
-                    Return (Buffer (One)
+                    Return (Buffer ()
                     {
                          0x03                                           
                     })
                 }
 
-                Return (Package (0x02)
+                Return (Package ()
                 {
                     "PCI-Thunderbolt", 
                     One
                 })
             }
 
-            Name (_RMV, One)  // _RMV: Removal Status
+            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+            {
+                Return (One)
+            }
+
             Device (DSB0)
             {
                 Name (_ADR, Zero)  // _ADR: Address
@@ -41,36 +45,64 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
                 {
                     If (LNot (Arg2))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                           
                         })
                     }
 
-                    Return (Package (0x02)
+                    Return (Package ()
                     {
                         "PCIHotplugCapable", 
                         One
                     })
                 }
 
+                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+                {
+                    Return (One)
+                }
+
                 Device (NHI0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Thunderbolt"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If (LNot (Arg2))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                           
                             })
                         }
 
-                        Return (Package (0x02)
+                        Return (Package ()
                         {
-                            "power-save", 
-                            Zero
+                            "built-in",
+                            Buffer ()
+                            {
+                                 0x00
+                            },
+
+                            "device_type",
+                            Buffer ()
+                            {
+                                "Thunderbolt 3 Controller"
+                            },
+
+                            "AAPL,slot-name",
+                            Buffer ()
+                            {
+                                "Built-In"
+                            },
+
+                            "power-save",
+                            One,
+                            Buffer ()
+                            {
+                                 0x00
+                            }
                         })
                     }
                 }
@@ -87,6 +119,16 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
                 Device (XHC2)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If (Arg2 == Zero) { Return (Buffer() { 0x03 } ) }
+                        Return (Package()
+                        {
+                            "USBBusNumber", Zero,
+                            "AAPL,xhci-clock-id", One,
+                            "UsbCompanionControllerPresent", Zero,
+                        })
+                    }
                     Method (_PS0, 0, Serialized)  // _PS0: Power State 0
                     {
                         Sleep (0xC8)

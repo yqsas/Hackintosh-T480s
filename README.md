@@ -1,8 +1,13 @@
 # 简介
+
 - Lenovo ThinkPad T480s Hackintosh EFI ，包含基础驱动，修改三码后开箱即用。
-- 适用版本：macOS Mojave 10.14.0 ~ 10.14.4。
+- 适用版本：macOS Catalina 10.15。
+  > 如需10.14.x版本，请切换至 mojave-10.14.6分支
+
+- This repository is a working progress of the clover folder used to install catalina on Lenovo ThinkPad T480s.
 
 # 前提
+
 1. 更换自带pm981的硬盘，截止10.13.6版本无解，Mojave未测试
 2. 更换自带intel无线网卡，本人使用 BCM94352Z Dell DW1560
 3. efi里使用的键盘触控板驱动可支持多指手势，但是使用之前必须在bios里面禁用小红点功能
@@ -48,6 +53,8 @@ Lenovo ThinkPad T480s
 
 3. 编辑 `config.plist` 中的SystemParameters内容:
     - CustomUUID：使用第一步中生成的UUID
+
+4. 蓝牙如果不可用，请将kexts/Other/目录中的`BrcmBluetoothInjector.kext`、`BrcmFirmwareData.kext`、`BrcmPatchRAM2.kext` 拷贝到 `/Library/Extensions` 目录下，并重建系统缓存：`sudo kextcache -i /`
 
 # 推荐工具
 - [one-key-hidpi](https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md) : 一键开启 macOS HiDPI

@@ -18,16 +18,16 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_KBD", 0x00000000)
 
         Method (_Q14, 0, NotSerialized)  // _Q14 (F6 key) Brightness up key
         {
-            Notify (\_SB.PCI0.LPCB.KBD, 0x0406)
+//            Notify (\_SB.PCI0.LPCB.KBD, 0x0406)
 //            Notify (\_SB.PCI0.LPCB.KBD, 0x0486)
-//            Notify (\_SB.PCI0.LPCB.KBD, 0x10)
+              Notify (\_SB.PCI0.LPCB.KBD, 0x10)
         }
 
         Method (_Q15, 0, NotSerialized)  // _Q15 (F5 key) Brightness down key
         {
-            Notify (\_SB.PCI0.LPCB.KBD, 0x0405)
+//            Notify (\_SB.PCI0.LPCB.KBD, 0x0405)
 //            Notify (\_SB.PCI0.LPCB.KBD, 0x0485)
-//            Notify (\_SB.PCI0.LPCB.KBD, 0x20)
+              Notify (\_SB.PCI0.LPCB.KBD, 0x20)
         }
 
 /*
